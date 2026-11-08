@@ -1,0 +1,306 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff7fb;
+    color: #333;
+}
+
+/* NAVBAR */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 8%;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px #00000010;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #e7549b;
+}
+
+nav a {
+    margin-left: 20px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #e7549b;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* HOME */
+.home {
+    min-height: 100vh;
+    padding: 120px 10% 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background: linear-gradient(120deg, #fff7fb, #ffe1ef);
+}
+
+.home-text {
+    max-width: 600px;
+}
+
+.home-text h4 {
+    color: #e7549b;
+    margin-bottom: 15px;
+}
+
+.home-text h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.home-text h1 span,
+.heading span {
+    color: #e7549b;
+}
+
+.home-text h2 {
+    margin-bottom: 20px;
+}
+
+.home-text p {
+    line-height: 1.8;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #e7549b;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: #bd3379;
+    transform: translateY(-3px);
+}
+
+.home-image img {
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 30px;
+    border: 7px solid white;
+    box-shadow: 0 10px 30px #e7549b30;
+}
+
+/* SECTION */
+.section {
+    padding: 100px 10%;
+    text-align: center;
+}
+
+.heading {
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+
+/* ABOUT */
+.about-content {
+    max-width: 800px;
+    margin: auto;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px #00000010;
+}
+
+.about-content p {
+    line-height: 2;
+    color: #666;
+}
+
+/* EDUCATION */
+.education {
+    background: #ffeaf3;
+}
+
+.education-box {
+    background: white;
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 15px;
+    line-height: 2;
+}
+
+/* SKILLS */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.skill-box {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px #00000010;
+    transition: .3s;
+}
+
+.skill-box:hover {
+    transform: translateY(-5px);
+}
+
+.skill-box h3 {
+    color: #e7549b;
+    margin-bottom: 12px;
+}
+
+.skill-box p {
+    color: #666;
+    line-height: 1.7;
+}
+
+/* PROJECT */
+.projects {
+    background: #ffeaf3;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project-box {
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px #00000010;
+    transition: .3s;
+}
+
+.project-box:hover {
+    transform: translateY(-5px);
+}
+
+.project-box h3 {
+    color: #e7549b;
+    margin-bottom: 15px;
+}
+
+.project-box p {
+    color: #666;
+    line-height: 1.7;
+}
+
+/* CONTACT */
+.contact {
+    background: #ffeaf3;
+}
+
+.contact p {
+    margin-bottom: 25px;
+    color: #666;
+}
+
+/* FOOTER */
+footer {
+    padding: 25px;
+    text-align: center;
+    background: #302432;
+    color: white;
+}
+
+/* RESPONSIVE */
+@media (max-width: 850px) {
+    .home {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .home-text h1 {
+        font-size: 32px;
+    }
+
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    nav a {
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 650px) {
+    header {
+        padding: 18px 6%;
+    }
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px;
+    }
+
+    nav.open {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .home-image img {
+        width: 230px;
+        height: 270px;
+    }
+
+    .section {
+        padding: 80px 7%;
+    }
+}
